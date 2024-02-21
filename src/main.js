@@ -15,7 +15,6 @@ const refs = {
   galleryRef: document.querySelector('.gallery'),
   loaderRef: document.querySelector('.loader'),
   loadMoreBtnRef: document.querySelector('.load-more-btn'),
-  upBtnRef: document.querySelector('.up-btn'),
 };
 
 const lightboxOptions = {
@@ -44,7 +43,7 @@ refs.formRef.addEventListener('submit', e => {
         refs.formRef.reset();
         if (data.totalHits > 15) {
           refs.loadMoreBtnRef.classList.remove('hide');
-          refs.upBtnRef.classList.remove('hide');
+          
         }
         if (data.hits.length === 0) {
           iziToast.error({
@@ -113,9 +112,3 @@ refs.loadMoreBtnRef.addEventListener('click', () => {
     });
 });
 
-refs.upBtnRef.addEventListener('click', () => {
-  window.scrollTo({
-    top: 0,
-    behavior: 'smooth',
-  });
-});
