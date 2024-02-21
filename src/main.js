@@ -5,7 +5,7 @@ import SimpleLightbox from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.min.css';
 
 import { getPhotoByKeyword } from './js/pixabay-api.js';
-import { loadGallery } from './js/render-functions.js';
+import { loadGallery } from './';
 
 export let curPage;
 
